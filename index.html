@@ -4,136 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meander - Создавайте текстовые квесты</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="images/logo.png" alt="Meander Logo" class="logo">
-            </div>
+    <div class="background-animation"></div>
+    
+    <header>
+        <nav>
+            <img src="images/logo.png" alt="Meander" class="logo">
             <div class="nav-links">
-                <a href="#home">Главная</a>
+                <a href="#features">Возможности</a>
                 <a href="#download">Скачать</a>
-                <a href="https://meander-1.gitbook.io/meander">Документация</a>
-                <a href="https://meander-1.gitbook.io/meander">О нас</a>
-                <a href="https://forms.gle/mgbAKtaKqWy9m9zw7">Обратная связь</a>
-                <a href="https://boosty.to/iilluminat" class="support-btn">Поддержать проект</a>
+                <a href="#community">Сообщество</a>
             </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content" data-aos="fade-up">
-                <h1>Создавайте текстовые квесты</h1>
-                <p>Meander - бесплатная программа для Android, которая делает создание текстовых квестов простым и увлекательным</p>
-                <div class="cta-buttons">
-                    <a href="#download" class="primary-btn">Скачать бесплатно</a>
-                    <a href="https://t.me/meanderRU" class="secondary-btn" target="_blank">
-                        <img src="images/telegram.png" alt="Telegram">
-                        Присоединиться к сообществу
-                    </a>
-                </div>
+    <main>
+        <section class="hero">
+            <h1>Создавайте<br>текстовые квесты</h1>
+            <p class="subtitle">Бесплатно. Без рекламы. Для всех.</p>
+            <div class="cta-buttons">
+                <a href="#download" class="primary-button">Скачать</a>
+                <a href="#features" class="secondary-button">Узнать больше</a>
             </div>
-            <div class="hero-image" data-aos="fade-left">
-                <img src="images/hero-app.png" alt="Meander App Preview">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2 data-aos="fade-up">Почему Meander?</h2>
-            <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up">
-                    <div class="feature-icon">
-                        <img src="images/easy-icon.png" alt="Простота">
-                    </div>
-                    <h3>Понятно каждому</h3>
-                    <p>Интуитивный интерфейс позволит создавать квесты даже без опыта</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon">
-                        <img src="images/powerful-icon.png" alt="Мощность">
-                    </div>
-                    <h3>Функциональность</h3>
-                    <p>Создавайте не просто квесты, а настоящие мини-игры</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon">
-                        <img src="images/community-icon.png" alt="Сообщество">
-                    </div>
-                    <h3>Активное сообщество</h3>
-                    <p>Делитесь своими квестами и играйте в работы других авторов</p>
-                </div>
+        <section id="features" class="features">
+            <div class="feature-card">
+                <h3>Собственный язык скриптинга</h3>
+                <p>Создавайте сложные сценарии с переменными и условиями</p>
             </div>
-        </div>
-    </section>
+            <div class="feature-card">
+                <h3>Визуальный редактор</h3>
+                <p>Интуитивный нодовый редактор в стиле Twine</p>
+            </div>
+            <div class="feature-card">
+                <h3>Готовые стили</h3>
+                <p>Множество встроенных тем оформления</p>
+            </div>
+        </section>
 
-    <section id="download" class="download">
-        <div class="container">
-            <h2 data-aos="fade-up">Скачать Meander</h2>
+        <section id="download" class="download">
+            <h2>Скачать Meander</h2>
             <div class="download-options">
-                <a href="https://play.google.com/store/apps/details?id=com.IILLUMINAT.meadner" class="download-card" data-aos="fade-up" target="_blank">
+                <a href="https://vk.cc/cFXOJS" class="store-button">
                     <img src="images/google-play.png" alt="Google Play">
                     <span>Google Play</span>
                 </a>
-                <a href="https://www.rustore.ru/catalog/app/com.IILLUMINAT.meadner" class="download-card" data-aos="fade-up" data-aos-delay="100" target="_blank">
+                <a href="https://vk.cc/cFXOPJ" class="store-button">
                     <img src="images/rustore.png" alt="RuStore">
                     <span>RuStore</span>
                 </a>
-                <a href="https://t.me/meanderRU/381" class="download-card" data-aos="fade-up" data-aos-delay="200" target="_blank">
-                    <img src="images/direct-download.png" alt="Прямая ссылка">
+                <a href="https://vk.cc/cFXOSG" class="store-button">
+                    <img src="images/nashstore.png" alt="NashStore">
+                    <span>NashStore</span>
+                </a>
+                <a href="https://vk.cc/cFXOTW" class="store-button">
+                    <img src="images/android.png" alt="APK">
                     <span>Скачать APK</span>
                 </a>
             </div>
-        </div>
-    </section>
+            <p class="platforms">Скоро на Windows и iOS</p>
+        </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="Meander Logo">
-                    <p>Создавайте удивительные текстовые квесты</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Навигация</h4>
-                        <a href="#home">Главная</a>
-                        <a href="#download">Скачать</a>
-                        <a href="https://meander-1.gitbook.io/meander">Документация</a>
-                        <a href="https://meander-1.gitbook.io/meander">О нас</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Сообщество</h4>
-                        <a href="https://t.me/meanderRU">Telegram</a>
-                        <a href="https://forms.gle/mgbAKtaKqWy9m9zw7">Обратная связь</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Поддержка</h4>
-                        <a href="https://boosty.to/iilluminat">Поддержать проект</a>
-                        <a href="https://forms.gle/mgbAKtaKqWy9m9zw7">Сообщить о баге</a>
-                        <a href="https://meander-1.gitbook.io/meander">Руководство</a>
-                    </div>
-                </div>
+        <section id="community" class="community">
+            <h2>Присоединяйтесь к сообществу</h2>
+            <div class="social-links">
+                <a href="https://t.me/s/meanderru" class="social-button">
+                    <img src="images/telegram.png" alt="Telegram">
+                </a>
+                <a href="https://vk.cc/cFXOWJ" class="social-button">
+                    <img src="images/discord.png" alt="Discord">
+                </a>
+                <a href="https://vk.com/meanderru" class="social-button">
+                    <img src="images/vk.png" alt="VK">
+                </a>
+                <a href="https://vk.cc/cFXOYg" class="social-button">
+                    <img src="images/simplex.png" alt="SimpleX">
+                </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Meander. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/firebase-config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
