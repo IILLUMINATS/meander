@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meander - Билд v2.1.0</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Специфичные стили для страницы билда */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        #build-details {
+            padding: 6rem 1rem;
+        }
+        
+        .build-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .build-date, .build-size {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(13, 209, 92, 0.1);
+            border-radius: 20px;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .build-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .build-card > div {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .build-card > div:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .build-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .build-card ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        
+        .build-card ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .build-download-section .download-options {
+            justify-content: flex-start;
+        }
+        
+        .back-button {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/logo.png" alt="Meander Logo">
+                <span>Meander</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../index.html#download">Скачать</a></li>
+                <li><a href="../index.html#roadmap">Дорожная карта</a></li>
+                <li><a href="../index.html#news">Новости</a></li>
+                <li><a href="../index.html#builds" class="active">Билды</a></li>
+                <li><a href="../index.html#contacts">Контакты</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="build-details">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Meander v2.1.0</h2>
+                    <div class="underline"></div>
+                </div>
+                
+                <div class="build-meta">
+                    <span class="build-date">10.10.2023</span>
+                    <span class="build-size">8.7 MB</span>
+                </div>
+                
+                <div class="build-card">
+                    <div class="build-description">
+                        <h3>Описание</h3>
+                        <p>Обновление 2.1.0 для Meander включает в себя важные улучшения и новые функции, направленные на повышение удобства использования и стабильности приложения. В этой версии мы добавили систему уведомлений и автообновления, улучшили работу с сервером и внедрили несколько полезных инструментов.</p>
+                    </div>
+                    
+                    <div class="build-notes">
+                        <h3>Примечания к выпуску</h3>
+                        <ul>
+                            <li>Добавлен виджет уведомлений для важных событий в приложении</li>
+                            <li>Добавлено автообновление со ссылкой на новую версию</li>
+                            <li>Добавлена работа с новым сервером от кот дев</li>
+                            <li>Добавлен прогресс бар (в стадии тестирования)</li>
+                            <li>Добавлена работа с билдами</li>
+                            <li>Временно убран выбор языка и темы из настроек</li>
+                            <li>Исправлены мелкие баги и улучшена производительность</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="build-requirements">
+                        <h3>Системные требования</h3>
+                        <ul>
+                            <li>Android 6.0 или выше</li>
+                            <li>Минимум 100 МБ свободного места</li>
+                            <li>ОЗУ: 1 ГБ или больше</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="build-download-section">
+                        <h3>Скачать</h3>
+                        <div class="download-options">
+                            <a href="https://t.me/meanderRU/381" class="download-option" target="_blank">
+                                <img src="../images/telegram.png" alt="Telegram">
+                                <span>Telegram</span>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.IILLUMINAT.meadner" class="download-option" target="_blank">
+                                <img src="../images/google-play.png" alt="Google Play">
+                                <span>Google Play</span>
+                            </a>
+                            <a href="https://www.rustore.ru/catalog/app/com.IILLUMINAT.meadner" class="download-option" target="_blank">
+                                <img src="../images/rustore.png" alt="RuStore">
+                                <span>RuStore</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="back-button">
+                    <a href="../index.html#builds" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Вернуться к списку билдов</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.png" alt="Meander Logo">
+                <span>Meander</span>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="../index.html#download">Скачать</a></li>
+                    <li><a href="../index.html#roadmap">Дорожная карта</a></li>
+                    <li><a href="../index.html#news">Новости</a></li>
+                    <li><a href="../index.html#builds">Билды</a></li>
+                    <li><a href="../index.html#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="donation">
+                <a href="https://boosty.to/iilluminat" class="donate-btn" target="_blank">
+                    <i class="fas fa-heart"></i>
+                    <span>Поддержать проект</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023-2024 Meander. Разработчик: Иллюминат. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

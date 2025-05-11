@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meander - Архив билдов</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .builds-archive-page {
+            padding: 6rem 2rem;
+            background-color: var(--bg-color);
+        }
+        
+        .archive-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .archive-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .filter-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .archive-select {
+            padding: 0.5rem 1rem;
+            background-color: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            font-size: 0.9rem;
+            outline: none;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        
+        .archive-select:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .archive-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(13, 209, 92, 0.2);
+        }
+        
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .archive-build-item {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition-medium);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .archive-build-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .archive-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .archive-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Meander Logo">
+                <span>Meander</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#download">Скачать</a></li>
+                <li><a href="index.html#roadmap">Дорожная карта</a></li>
+                <li><a href="index.html#news">Новости</a></li>
+                <li><a href="index.html#builds" class="active">Билды</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="builds-archive-page">
+            <div class="archive-container">
+                <div class="section-title">
+                    <h2>Архив всех билдов</h2>
+                    <div class="underline"></div>
+                </div>
+                
+                <div class="archive-filters">
+                    <div class="filter-group">
+                        <span class="filter-label">Фильтр по версиям:</span>
+                        <select id="archiveVersionFilter" class="archive-select">
+                            <option value="all">Все версии</option>
+                            <option value="v2">2.x</option>
+                            <option value="v1">1.x</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <span class="filter-label">Сортировка:</span>
+                        <select id="archiveSortFilter" class="archive-select">
+                            <option value="newest">Сначала новые</option>
+                            <option value="oldest">Сначала старые</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="archive-grid" id="archiveBuildsContainer">
+                    <!-- Билды будут загружаться из builds.json через JavaScript -->
+                </div>
+                
+                <div class="back-button" style="margin-top: 3rem; text-align: center;">
+                    <a href="index.html#builds" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Вернуться на главную</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Meander Logo">
+                <span>Meander</span>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#download">Скачать</a></li>
+                    <li><a href="index.html#roadmap">Дорожная карта</a></li>
+                    <li><a href="index.html#news">Новости</a></li>
+                    <li><a href="index.html#builds">Билды</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="donation">
+                <a href="https://boosty.to/iilluminat" class="donate-btn">
+                    <i class="fas fa-heart"></i>
+                    <span>Поддержать проект</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023-2024 Meander. Разработчик: Иллюминат. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadArchiveBuilds();
+            
+            // Фильтры для архива
+            const versionFilter = document.getElementById('archiveVersionFilter');
+            const sortFilter = document.getElementById('archiveSortFilter');
+            
+            if (versionFilter && sortFilter) {
+                versionFilter.addEventListener('change', loadArchiveBuilds);
+                sortFilter.addEventListener('change', loadArchiveBuilds);
+            }
+        });
+        
+        // Загрузка всех билдов для архива
+        function loadArchiveBuilds() {
+            const archiveContainer = document.getElementById('archiveBuildsContainer');
+            if (!archiveContainer) return;
+            
+            // Получаем значения фильтров
+            const versionFilter = document.getElementById('archiveVersionFilter').value;
+            const sortFilter = document.getElementById('archiveSortFilter').value;
+            
+            // Загружаем билды из JSON
+            fetch('data/builds.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Не удалось загрузить билды');
+                    }
+                    return response.json();
+                })
+                .then(builds => {
+                    // Применяем фильтр по версии
+                    let filteredBuilds = builds;
+                    if (versionFilter === 'v2') {
+                        filteredBuilds = builds.filter(build => build.version.startsWith('v2'));
+                    } else if (versionFilter === 'v1') {
+                        filteredBuilds = builds.filter(build => build.version.startsWith('v1'));
+                    }
+                    
+                    // Сортировка
+                    filteredBuilds.sort((a, b) => {
+                        const dateA = new Date(a.date.split('.').reverse().join('-'));
+                        const dateB = new Date(b.date.split('.').reverse().join('-'));
+                        
+                        if (sortFilter === 'newest') {
+                            return dateB - dateA; // Сначала новые
+                        } else {
+                            return dateA - dateB; // Сначала старые
+                        }
+                    });
+                    
+                    // Очистка контейнера
+                    archiveContainer.innerHTML = '';
+                    
+                    // Если нет билдов после фильтрации
+                    if (filteredBuilds.length === 0) {
+                        archiveContainer.innerHTML = `
+                            <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+                                <p>Билды не найдены. Попробуйте изменить фильтры.</p>
+                            </div>
+                        `;
+                        return;
+                    }
+                    
+                    // Добавляем билды в сетку
+                    filteredBuilds.forEach(build => {
+                        const buildElement = createArchiveBuildItem(build);
+                        archiveContainer.appendChild(buildElement);
+                    });
+                })
+                .catch(error => {
+                    console.error('Ошибка при загрузке билдов:', error);
+                    
+                    // Сообщение об ошибке
+                    archiveContainer.innerHTML = `
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+                            <p>Не удалось загрузить билды. Пожалуйста, попробуйте позже.</p>
+                        </div>
+                    `;
+                });
+        }
+        
+        // Создание элемента билда для архива
+        function createArchiveBuildItem(build) {
+            const item = document.createElement('div');
+            item.className = 'archive-build-item build-item';
+            
+            // Формирование ссылки на страницу билда
+            const buildPageUrl = `builds/${build.version.toLowerCase().replace(/\s+/g, '-')}.html`;
+            
+            // Ограничиваем список примечаний до 3 пунктов для компактности
+            const limitedNotes = build.notes.slice(0, 3);
+            const notesList = limitedNotes.map(note => `<li>${note}</li>`).join('');
+            const hasMoreNotes = build.notes.length > 3;
+            
+            item.innerHTML = `
+                <div class="build-header">
+                    <span class="build-version">${build.version}</span>
+                    <span class="build-date">${build.date}</span>
+                </div>
+                <div class="build-notes">
+                    <h4>Примечания к выпуску:</h4>
+                    <ul>
+                        ${notesList}
+                        ${hasMoreNotes ? '<li>...</li>' : ''}
+                    </ul>
+                </div>
+                <div class="build-download">
+                    <a href="${buildPageUrl}" class="build-download-btn">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Подробнее</span>
+                    </a>
+                </div>
+            `;
+            
+            return item;
+        }
+    </script>
+</body>
+</html> 

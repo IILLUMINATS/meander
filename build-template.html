@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meander - Билд {VERSION}</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Meander Logo">
+                <span>Meander</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#download">Скачать</a></li>
+                <li><a href="index.html#roadmap">Дорожная карта</a></li>
+                <li><a href="index.html#news">Новости</a></li>
+                <li><a href="index.html#builds" class="active">Билды</a></li>
+                <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="build-details">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Meander {VERSION}</h2>
+                    <div class="underline"></div>
+                </div>
+                
+                <div class="build-meta">
+                    <span class="build-date">{DATE}</span>
+                    <span class="build-size">{SIZE} MB</span>
+                </div>
+                
+                <div class="build-card">
+                    <div class="build-description">
+                        <h3>Описание</h3>
+                        <p>{DESCRIPTION}</p>
+                    </div>
+                    
+                    <div class="build-notes">
+                        <h3>Примечания к выпуску</h3>
+                        <ul>
+                            {NOTES}
+                        </ul>
+                    </div>
+                    
+                    <div class="build-requirements">
+                        <h3>Системные требования</h3>
+                        <ul>
+                            <li>Android 6.0 или выше</li>
+                            <li>Минимум 100 МБ свободного места</li>
+                            <li>ОЗУ: 1 ГБ или больше</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="build-download-section">
+                        <h3>Скачать</h3>
+                        <div class="download-options">
+                            <a href="{DOWNLOAD_URL}" class="download-option">
+                                <img src="images/telegram.png" alt="Telegram">
+                                <span>Telegram</span>
+                            </a>
+                            {GOOGLE_PLAY}
+                            {RUSTORE}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="back-button">
+                    <a href="index.html#builds" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Вернуться к списку билдов</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Meander Logo">
+                <span>Meander</span>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#download">Скачать</a></li>
+                    <li><a href="index.html#roadmap">Дорожная карта</a></li>
+                    <li><a href="index.html#news">Новости</a></li>
+                    <li><a href="index.html#builds">Билды</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="donation">
+                <a href="https://boosty.to/iilluminat" class="donate-btn">
+                    <i class="fas fa-heart"></i>
+                    <span>Поддержать проект</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023-2024 Meander. Разработчик: Иллюминат. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
